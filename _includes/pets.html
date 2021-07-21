@@ -4,32 +4,65 @@ layout: myheader
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
         <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+        <link rel="stylesheet" href="{{ '/styles/flexbox.css' | url }}">
+        <link rel="stylesheet" href="{{ '/styles/grid.css' | url }}">
     </head>
-    <body style="background-color:{{color_keyword}}">
+    <style>
+            :root {
+                --red: {{red}};
+                --green: {{green}};
+                --blue: {{blue}};
+            
+                --accessible-color: calc(
+                    (
+                        (
+                            (
+                                (var(--red) * 299) +
+                                (var(--green) * 587) +
+                                (var(--blue) * 114)
+                            ) / 1000
+                        ) - 128
+                    ) * -1000
+                );
+            }
 
-        
-        
+        body {
+            color: 
+                rgb(
+                    var(--accessible-color),
+                    var(--accessible-color),
+                    var(--accessible-color)
+                );
+            background-color:
+                rgb(
+                    var(--red),
+                    var(--green),
+                    var(--blue)
+                );
+            }
+    </style>
+    <body>
+
+        {{content}}
+
         {% unless page.url == '/' %}
             <p><b>Photograph Information</b></p>
             A {{photo_keyword}} photo by {{photographer_first_name}}{% unless photographer_last_name == "" %} {{photographer_last_name}}{% endunless %}.<br>
             <a href = "{{photo_url}}">{{photo_url}}</a><br>
             {% unless photo_location_name == "" %}
-            Photo taken at {{photo_location_name}}.<br>
+                Photo taken at {{photo_location_name}}.<br>
             {% endunless %}
             {% unless photo_submitted_at == "" %}
-            Date of Creation: {{photo_submitted_at}}<br>
+                Date of Creation: {{photo_submitted_at}}<br>
             {% endunless %}
             {% unless exif_camera_model == "" %}
-            Camera Model: {{exif_camera_model}}
+                Camera Model: {{exif_camera_model}}
             {% endunless %}
         {% endunless %}
-
-        {{content}}
 
         {% if page.url == '/' %}
         <ol>
