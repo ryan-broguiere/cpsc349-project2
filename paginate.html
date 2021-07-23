@@ -11,10 +11,14 @@ pagination:
 <meta charset="utf-8">
 
 {% for photo in photos %}
-<ul>
-    <li><a href = "{{photo.data.photo_url}}">A {{photo.data.photo_keyword}} photo by {{photo.data.photographer_first_name}} {{photo.data.photographer_last_name}}.</a>
-    </li>
 
-</ul>
+    <div class = "grid">
+
+        <a href="{{ photo.url | url }}"><img src="{{ photo.data.photo_image_url}}" height="450" width="600" /></a>
+        A {{ photo.data.photo_keyword }} photo by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
+
+    </div>
+
+
 {% endfor %}
 </html>
