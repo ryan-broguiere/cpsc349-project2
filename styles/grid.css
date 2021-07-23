@@ -1,3 +1,110 @@
-/*body {
-    color: blue;
-  }/*
+.body{
+  color: grey;
+}
+
+.center{
+  margin: auto;
+  width: 60;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar {
+  width: 100;
+  background-color: black;
+  overflow: auto;
+}
+
+nav {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+nav a{
+  display: inline-block;
+  color: white;
+  text-size-adjust: auto;
+  padding: 15px 15px;
+  font-size: 23px;
+  /* float: center; */
+  margin-left: 21%;  
+  font-weight: bold;
+  
+}
+
+nav a:hover {
+  background-color: #999
+}
+
+.header {
+  overflow:auto;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 300%;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  position: relative;
+  float:center;  
+}
+
+.header img {
+  float: center;
+  height: 50px;
+  width: 50px;
+  border: 3px solid black;
+  position: relative;
+  display:inline;
+  margin-right: .1%; 
+}
+
+.pagenav {
+  overflow:auto;
+  font-size: 300%;
+  text-decoration: underline;
+}
+
+.footer {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  
+}
+
+.button:hover {
+  background-color:#999
+}
+
+
+.grid {
+ display: grid;
+ grid-template-columns: repeat(1, 1fr);
+ grid-template-rows: repeat(1, 1fr);
+ grid-gap: 10px;
+   
+}
+
+.grid img{  
+  border: 3px solid black;
+  box-shadow: 2px 2px 6px 0px  black;
+   
+}
+
+.grid img:hover{
+  opacity: .6;
+}
