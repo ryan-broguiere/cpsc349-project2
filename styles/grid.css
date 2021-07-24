@@ -9,6 +9,7 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .headercenter {
   text-align: center;
   
@@ -16,6 +17,10 @@
 
 .navbar {
   width: 110;
+=======
+.navbar {
+  width: 100;
+>>>>>>> 6e0104cbe9bc8a2d37b4094f2cd6f88e0cb52d92
   background-color: black;
   overflow: auto;
 }
@@ -35,8 +40,12 @@ nav a{
   padding: 15px 15px;
   font-size: 23px;
   /* float: center; */
+<<<<<<< HEAD
   margin-left: 5%;
   margin-right: 5%;
+=======
+  margin-left: 20%;
+>>>>>>> 6e0104cbe9bc8a2d37b4094f2cd6f88e0cb52d92
   font-weight: bold;
 
 }
@@ -110,10 +119,14 @@ nav a:hover {
 
 .grid img{
   border: 10px solid black;
+<<<<<<< HEAD
   box-shadow: 2px 2px 6px 0px  black;
   width: 600px;
   height: 600px;
   object-fit: cover;
+=======
+  box-shadow: 2px 2px 6px 0px  black;  
+>>>>>>> 6e0104cbe9bc8a2d37b4094f2cd6f88e0cb52d92
 
 }
 
