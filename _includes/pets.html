@@ -7,6 +7,8 @@ layout: myheader
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ '/styles/tailwind.css' | url }}">
+         
+        
     </head>
     <style>
             :root {
@@ -62,7 +64,8 @@ layout: myheader
         {% endunless %}
 
         {% if page.url == '/' %}
-        <ol>
+        <ol class = "grid">
+            
             {% for photo in collections.photos %}
                 <li>
                     <a href="{{ photo.url | url }}">
