@@ -1,0 +1,24 @@
+---
+title: Pagination Test
+layout: myheader
+pagination:
+    data: collections.photos
+    size: 10
+    alias: photos
+---
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<div class = "grid">
+{% for photo in photos %}
+
+    <div>
+        
+        <a href="{{ photo.url | url }}"><img src="{{ photo.data.photo_image_url}}" width="600" /></a><br>
+        A {{ photo.data.photo_keyword }} photo by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
+    </div>
+   
+
+{% endfor %}
+</div>
+</html>
