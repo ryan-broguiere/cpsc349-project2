@@ -127,7 +127,9 @@ nav a:hover {
 
 }
 
-
+a:hover {
+  color: lightgreen;
+}
 
 
 
