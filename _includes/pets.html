@@ -67,13 +67,8 @@ layout: myheader
         <ol class = "grid">
             
             {% for photo in collections.photos %}
-<<<<<<< Updated upstream
-                <li>
-                    <a href="{{ photo.url | url }}">
-=======
                 <li class = "text">
                     <a href="/cpsc349-project2{{ photo.url | url }}">
->>>>>>> Stashed changes
                         A {{ photo.data.photo_keyword }} photo
                         by {{ photo.data.photographer_first_name}} {{ photo.data.photographer_last_name }}
                     </a>
